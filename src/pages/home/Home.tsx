@@ -159,6 +159,19 @@ const Home = () => {
 
      </div>
     </div>
+
+      {/* Efeito Shine */}
+<span
+  className="
+    absolute 
+    left-0 right-0 
+    bottom-0 
+    h-[180px] sm:h-[200px] md:h-[240px] lg:h-[280px]
+    bg-gradient-to-t from-white via-white/80 to-transparent
+    pointer-events-none
+    z-30
+  "
+/>
   </section>
 
   <div className="w-screen flex flex-col items-center bg-whites mt-[-10px]">
@@ -197,18 +210,7 @@ const Home = () => {
     />
   </svg>
 
-  {/* Efeito Shine */}
-<span
-  className="
-    absolute 
-    left-0 right-0 
-    bottom-0 
-    h-[1600px] sm:h-[2000px] md:h-[2400px] lg:h-[280px]
-    bg-gradient-to-t from-white via-white/80 to-transparent
-    pointer-events-none
-    z-30
-  "
-/>
+
 
 
 </button>
@@ -268,14 +270,14 @@ const Home = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="bg-white shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
+        className="bg-blue-950 shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
       >
         <div className="flex-shrink-0 w-12 h-12 rounded-full  flex items-center justify-center">
-          <FaRegClock className="text-blue-950 text-4xl" />
+          <FaRegClock className="text-white text-4xl" />
         </div>
         <div>
-          <h3 className="font-semibold text-lg text-gray-900">Experiência</h3>
-          <p className="text-gray-600 text-sm">
+          <h3 className="font-semibold text-lg text-white">Experiência</h3>
+          <p className="text-white text-sm">
             Mais de 30 anos atuando no mercado de construções residenciais e comerciais.
           </p>
         </div>
@@ -287,14 +289,14 @@ const Home = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
-        className="bg-white shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
+        className="bg-blue-950 shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
       >
         <div className="flex-shrink-0 w-12 h-12 rounded-full  flex items-center justify-center">
-          <FaRegHandshake className="text-blue-950 text-4xl" />
+          <FaRegHandshake className="text-white text-4xl" />
         </div>
         <div>
-          <h3 className="font-semibold text-lg text-gray-900">Transparência</h3>
-          <p className="text-gray-600 text-sm">
+          <h3 className="font-semibold text-lg text-white">Transparência</h3>
+          <p className="text-white text-sm">
             Negociações claras, contratos bem definidos e acompanhamento em cada etapa.
           </p>
         </div>
@@ -306,14 +308,14 @@ const Home = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
         viewport={{ once: true }}
-        className="bg-white shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
+        className="bg-blue-950 shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
       >
         <div className="flex-shrink-0 w-12 h-12 rounded-full  flex items-center justify-center">
-          <FaUserCheck className="text-blue-950 text-4xl" />
+          <FaUserCheck className="text-white text-4xl" />
         </div>
         <div>
-          <h3 className="font-semibold text-lg text-gray-900">Compromisso</h3>
-          <p className="text-gray-600 text-sm">
+          <h3 className="font-semibold text-lg text-white">Compromisso</h3>
+          <p className="text-white text-sm">
             Obras entregues dentro do prazo, com segurança e qualidade garantida.
           </p>
         </div>
@@ -325,14 +327,14 @@ const Home = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
         viewport={{ once: true }}
-        className="bg-white shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
+        className="bg-blue-950 shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
       >
         <div className="flex-shrink-0 w-12 h-12 rounded-full  flex items-center justify-center">
-          <FaTools className="text-blue-950 text-4xl" />
+          <FaTools className="text-white text-4xl" />
         </div>
         <div>
-          <h3 className="font-semibold text-lg text-gray-900">Qualidade</h3>
-          <p className="text-gray-600 text-sm">
+          <h3 className="font-semibold text-lg text-white">Qualidade</h3>
+          <p className="text-white text-sm">
             Utilizamos materiais de primeira linha e profissionais altamente qualificados.
           </p>
         </div>
@@ -344,14 +346,14 @@ const Home = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
         viewport={{ once: true }}
-        className="bg-white shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
+        className="bg-blue-950 shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
       >
         <div className="flex-shrink-0 w-12 h-12 rounded-full  flex items-center justify-center">
-          <FaLightbulb className="text-blue-950 text-4xl" />
+          <FaLightbulb className="text-white text-4xl" />
         </div>
         <div>
-          <h3 className="font-semibold text-lg text-gray-900">Inovação</h3>
-          <p className="text-gray-600 text-sm">
+          <h3 className="font-semibold text-lg text-white">Inovação</h3>
+          <p className="text-white text-sm">
             Projetos modernos e soluções criativas para atender cada necessidade.
           </p>
         </div>
@@ -363,14 +365,14 @@ const Home = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
         viewport={{ once: true }}
-        className="bg-white shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
+        className="bg-blue-950 shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition"
       >
         <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center">
-          <FaHeadset className="text-blue-950 text-4xl" />
+          <FaHeadset className="text-white text-4xl" />
         </div>
         <div>
-          <h3 className="font-semibold text-lg text-gray-900">Suporte</h3>
-          <p className="text-gray-600 text-sm">
+          <h3 className="font-semibold text-lg text-white">Suporte</h3>
+          <p className="text-white text-sm">
             Atendimento personalizado antes, durante e após a entrega da obra.
           </p>
         </div>
@@ -600,14 +602,15 @@ const Home = () => {
   >
      
     {/* Título e Descrição */}
-    <div id="Servicos"className="text-center mb-16 mt-30">
-      <h2 className="text-5xl font-extrabold text-gray-300 mb-4 uppercase tracking-wide">
-        Pronto para transformar seu espaço? 
-      </h2>
-      <p className="text-lg text-white max-w-2xl mx-auto">
-        Entre em contato e solicite um orçamento sem compromisso.
-      </p>
-    </div>
+<div id="Servicos" className="text-center mb-12 sm:mb-16 mt-16 sm:mt-24 px-4">
+  <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-gray-300 mb-3 sm:mb-4 uppercase tracking-wide leading-tight">
+    Pronto para transformar seu espaço?
+  </h2>
+  <p className="text-sm sm:text-base md:text-lg text-white max-w-xl sm:max-w-2xl mx-auto">
+    Entre em contato e solicite um orçamento sem compromisso.
+  </p>
+</div>
+
 
     {/* Container */}
     <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -836,11 +839,23 @@ const Diferenciais = () => {
   return (
     <section className="w-full bg-white py-16 px-6 sm:px-12 flex flex-col items-center justify-center">
       {/* Contadores */}
-      <div className="w-full max-w-6xl grid grid-cols-3 gap-6 text-center mb-16">
-        <Counter end={30} label="Anos de Experiência" />
-        <Counter end={1200} label="Obras Concluídas" />
-        <Counter end={550} label="Clientes Satisfeitos" />
-      </div>
+      <div className="flex flex-wrap justify-center items-center text-center gap-6 sm:gap-10 mt-10">
+  <div className="flex flex-col items-center">
+    <h2 className="text-3xl sm:text-5xl font-bold">30+</h2>
+    <p className="text-sm sm:text-base mt-1">Anos de Experiência</p>
+  </div>
+
+  <div className="flex flex-col items-center">
+    <h2 className="text-3xl sm:text-5xl font-bold">1200+</h2>
+    <p className="text-sm sm:text-base mt-1">Obras Concluídas</p>
+  </div>
+
+  <div className="flex flex-col items-center">
+    <h2 className="text-3xl sm:text-5xl font-bold">550+</h2>
+    <p className="text-sm sm:text-base mt-1">Clientes Satisfeitos</p>
+  </div>
+</div>
+
     </section>
   );
 };
