@@ -650,7 +650,7 @@ const Home = () => {
                 className="flex items-center gap-3 text-blue-600 hover:text-blue-800 font-semibold transition-colors"
               >
                 <i className="fa-solid fa-envelope text-2xl"></i>
-                email@seuemail.com.br
+                jluizcontrucaoereforma@gmail.com
               </a>
             </li>
             

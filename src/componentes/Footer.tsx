@@ -53,10 +53,10 @@ function Footer() {
             </li>
             
             <li className="flex items-center gap-2">
-              <FaFacebook /> <a href="#" className="hover:text-blue-400">Facebook</a>
+              <FaFacebook /> <a href="https://www.facebook.com/share/1KWBpcHatR/" className="hover:text-blue-400">Facebook</a>
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope /> <a href="#" className="hover:text-blue-400">E-Mail</a>
+              <FaEnvelope /> <a href="jluizcontrucaoereforma@gmail.com" className="hover:text-blue-400">E-Mail</a>
             </li>
             
           </ul>
