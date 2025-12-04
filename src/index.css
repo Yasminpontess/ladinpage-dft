@@ -1,23 +1,59 @@
 @import "tailwindcss";
 
 
-/* ===== marquee / scroll-x fallback (colar no src/index.css) ===== */
+
+
+/* ===== marquee / scroll-x fallback ===== */
 @keyframes scroll-x {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* classe que você já usa no JSX: animate-scroll-x */
 .animate-scroll-x {
-  animation: scroll-x 40s linear infinite;
+  animation: scroll-x 18s linear infinite;
   will-change: transform;
   transform: translateZ(0);
 }
 
-/* garantir que o inner seja inline-flex e não quebre */
 .marquee-inner {
   display: inline-flex;
   white-space: nowrap;
   align-items: center;
   gap: 1.5rem;
 }
+
+/* ===== BOTÃO WHATSAPP ===== */
+#botao-whatsapp {
+  z-index: 9999 !important;
+}
+
+/* ===========================
+   SWIPER – BOLINHAS (PAGINAÇÃO)
+   =========================== */
+
+/* posição da paginação */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 22px !important;
+  bottom: 0 !important;     /* 🔥 evita ficar colando no carrossel */
+}
+
+/* estilo das bolinhas */
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: #ccc !important;
+  opacity: 0.4 !important;
+}
+
+/* bolinha ativa */
+.swiper-pagination-bullet-active {
+  background: #1e40af !important; /* azul forte */
+  opacity: 1 !important;
+}
+
+
+
+
+
+
