@@ -130,22 +130,24 @@ export default function Hero() {
           </p>
 
           {/* BOTÃO */}
-          <button
+<button
+  onClick={() => window.open("https://wa.me/5511992829484?text=Olá,%20quero%20uma%20proposta%20personalizada!", "_blank")}
   className="
     mt-2 md:mt-4
     bg-red-600 hover:bg-white
     text-white hover:text-blue-700
     font-bold
-    px-3 py-1.5           /* 🔽 menor no mobile */
-    md:px-5 md:py-2       /* 🔼 normal no desktop */
+    px-3 py-1.5
+    md:px-5 md:py-2
     rounded-md 
-    text-xs md:text-lg    /* 🔽 fonte menor no mobile */
+    text-xs md:text-lg
     shadow-xl btn-pulse
     transition-all duration-200
   "
 >
   QUERO RECEBER UMA PROPOSTA PERSONALIZADA
 </button>
+
 
 
           {/* ANIMAÇÃO DO BOTÃO */}

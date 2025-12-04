@@ -4,9 +4,6 @@ import Home from "./pages/home/Home";
 import Footer from "./componentes/Footer";
 import SecaoServicos from "./componentes/SecaoServico";
 import { ResultadosDFT } from "./componentes/Resultados";
-
-
-
 import Segmentos from "./componentes/Segmentos";
 import Formulario from "./componentes/Formulario";
 
@@ -15,7 +12,7 @@ const App = () => {
     <>
       {/* Botão flutuante do WhatsApp */}
       <a
-  href="https://wa.me/5511956576642"
+  href="https://wa.me/5511992829484"
   className="fixed bottom-4 right-4 bg-[#25d366] rounded-full w-14 h-14 flex items-center justify-center shadow-lg z-[9999]"
   target="_blank"
   rel="noopener noreferrer"
