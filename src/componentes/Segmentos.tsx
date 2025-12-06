@@ -1,4 +1,7 @@
 // components/CarrosselSegmentos.tsx
+// topo do arquivo Segmentos.tsx
+import React, { useState } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -15,18 +18,63 @@ export default function Carrossel() {
     { title: "Saneantes", img: "public/imagens/Saneantes.png" },
   ];
 
+
+  
+
+
+const depoimentos = [
+    {
+      texto: "\"Empresa estruturada, equipe responsável e frota impecável.\"",
+      nome: "João Perinoto",
+      cargo: "Riclan / Freegels",
+    },
+    {
+      texto: "\"Atendimento excelente e entrega dentro do prazo.\"",
+      nome: "Maria Souza",
+      cargo: "Parceira DFT",
+    },
+    {
+      texto: "\"Logística precisa e transparente. Recomendo!\" ",
+      nome: "Carlos Lima",
+      cargo: "Cliente",
+    },
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  const anterior = () => {
+    setIndex((prev) => (prev === 0 ? depoimentos.length - 1 : prev - 1));
+  };
+
+  const proximo = () => {
+    setIndex((prev) => (prev === depoimentos.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <div
-      className="w-full py-16 bg-cover bg-center -mt-25"
+      className="w-full py-12 bg-cover bg-center -mt-25"
       style={{ backgroundImage: "url('public/imagens/BG 2.jpg')" }}
     >
-      <h2 className="text-center text-white text-sm tracking-wide">
+      <h2 className="text-center text-white text-[25px] py-30 tracking-wide">
         Experiência em múltiplos
       </h2>
 
-      <h1 className="text-center text-[40px] text-red-300 font-bold mb-15">
-        Segmentos
-      </h1>
+      <h1
+  className="
+    text-center text-[55px] md:text-[65px] font-bold mb-5 -mt-30
+    md:bg-gradient-to-l bg-gradient-to-r
+     from-[#FFF6F3] 
+     via-[#FFB9A6] via-5%
+     to-[#FF3B2E]
+    bg-clip-text text-transparent
+  "
+
+  
+>
+  Segmentos
+</h1>
+
+
 
       <div className="relative pb-12">
         <Swiper
@@ -43,7 +91,7 @@ export default function Carrossel() {
               <div
                 className="
                   relative
-                  h-[410px]
+                  h-[350px]
                   w-[300px]      /* ✅ largura fixa sem espaçamento gigante */
                   rounded-xl
                   overflow-hidden
@@ -74,7 +122,7 @@ export default function Carrossel() {
                     p-6
                   "
                 >
-                  <h3 className="text-[#24269C] text-xl font-bold text-center">
+                  <h3 className="text-[#1D1F96] text-[30px] font-bold text-center">
                     {item.title}
                   </h3>
                 </div>
@@ -98,7 +146,7 @@ export default function Carrossel() {
   <div
     className="
       max-w-4xl w-full
-      bg-white/10 backdrop-blur-md
+       backdrop-blur-md
       border border-white/30
       rounded-2xl
       p-6 md:p-10
@@ -107,9 +155,20 @@ export default function Carrossel() {
       order-2
     "
   >
-    <h2 className="text-3xl md:text-4xl font-bold text-red-500 mb-4">
-      Quem Somos
-    </h2>
+   <h2
+  className="
+    text-3xl md:text-4xl font-bold mb-4
+    bg-gradient-to-r
+    from-[#FFFFFF] from-20%
+    via-[#FF3B2E] via-65%
+    to-[#FF3B2E]
+    bg-clip-text text-transparent
+  "
+>
+  Quem Somos
+</h2>
+
+
 
     <p className="text-white text-sm md:text-base leading-relaxed mb-4">
       Com mais de 10 anos de experiência no setor logístico, somos especialistas em transporte seguro
@@ -132,83 +191,144 @@ export default function Carrossel() {
 
 
 
-{/* ---------------- BLOCO "DEPOIMENTOS" ---------------- */}
-<div
-  className="
-    w-full px-5 mt-10
-    flex flex-col md:flex-row justify-center items-center 
-    gap-10 md:gap-20
-    max-w-[1200px] mx-auto
-  "
->
+{/* ---------------- BLOCO DEPOIMENTOS ---------------- */}
+<section className="w-full py-20 px-4 md:px-65 flex flex-col md:flex-row justify-between items-center gap-10">
 
-  {/* 4️⃣ TEXTOS — NO MOBILE FICA PRIMEIRO */}
-  <div className="max-w-[400px] text-white text-center md:text-left order-4 md:order-1">
-    <h2 className="text-2xl md:text-[28px] font-semibold font-sora leading-tight">
+  {/* ---------- TEXTOS ---------- */}
+  <div className="max-w-[460px] text-white md:text-left text-center">
+    <h2 className="text-3xl md:text-[32px] font-semibold leading-tight">
       Nossos clientes aprovam e
     </h2>
 
     <h1
       className="
-        font-sora text-5xl md:text-6xl font-extrabold mb-6 leading-none
-        bg-gradient-to-b from-red-400 to-red-700 
+        font-sora text-5xl md:text-[64px] font-extrabold leading-none 
+        bg-gradient-to-r from-[#FFF6F3] via-[#FF8C73] to-[#FF3B2E]
         bg-clip-text text-transparent
       "
     >
-      Comprovam Resultados
+      Comprovam
     </h1>
 
-    <p className="text-[10px] md:text-[18px] mb-8">
-      Nossos clientes não só aprovam, mas <br /> comprovam o que nossa operação promete: <br />
-      maior performance e eficiência logística.
-    </p>
+    <h1
+      className="
+        font-sora text-5xl md:text-[64px] font-extrabold leading-none mb-6
+        bg-gradient-to-r from-red-700 to-white
+        bg-clip-text text-transparent
+      "
+    >
+      Resultados
+    </h1>
+
+    {/* Desktop only */}
+<p className="hidden md:block text-[20px] leading-tight mb-8">
+  Nossos clientes não só aprovam, mas <br /> comprovam o que nossa operação promete: <br />
+  maior performance e eficiência logística.
+</p>
+
+{/* Mobile only */}
+<p className="block md:hidden text-[19px] leading-tight mb-8">
+  Nossos clientes não só aprovam, mas <br /> comprovam o que nossa operação promete: <br />
+  maior performance e eficiência logística.
+</p>
+
+
+   <button
+  className="
+    hidden md:block
+    bg-red-600 hover:bg-red-700 
+    text-white font-bold
+    px-6 py-4 md:px-6 md:py-2
+    rounded-md shadow-xl 
+    transition-all
+  "
+>
+  A CHAMADA PARA AÇÃO VEM AQUI
+</button>
+
   </div>
 
-  {/* 5️⃣ CARD — NO MOBILE FICA DEPOIS DO TÍTULO */}
-  <div
-    className="
-      bg-white rounded-xl shadow-xl p-10 w-full max-w-[450px]
-      text-center relative order-5 md:order-2
-    "
-  >
-    <p className="text-gray-800 text-lg leading-relaxed mb-6">
-      Empresa estruturada, equipe responsável e frota impecável.
-    </p>
+  {/* ---------- CARROSSEL ---------- */}
+  <div className="flex justify-center w-full md:max-w-[550px]">
 
-    <p className="text-red-600 font-bold text-lg">João Perinoto</p>
-    <p className="text-gray-600 text-sm mt-1">Ricaln/Freegels</p>
+    <div
+      className="
+        bg-white rounded-2xl shadow-xl
+        p-12 w-[92%] md:w-full text-center relative
+        min-h-[330px] flex flex-col justify-center
+      "
+    >
 
-    {/* Setas */}
-    <button className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl text-[#0e1b93]">
-      ❮
-    </button>
+      
+      {/* CONTEÚDO DO CARD */}
+      <p className="text-[#0e1b93] text-[24px] leading-relaxed mb-6 max-w-[420px] mx-auto">
+        {depoimentos[index].texto}
+      </p>
 
-    <button className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl text-[#0e1b93]">
-      ❯
-    </button>
+      <p className="text-red-600 font-bold text-xl">
+        {depoimentos[index].nome}
+      </p>
+      <p className="text-gray-600 text-sm mt-1">
+        {depoimentos[index].cargo}
+      </p>
 
-    {/* Bolinhas */}
-    <div className="flex justify-center gap-2 mt-6">
-      <div className="w-3 h-3 rounded-full bg-gray-400"></div>
-      <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-      <div className="w-3 h-3 rounded-full bg-gray-300"></div>
+      {/* SETA ESQUERDA */}
+      <button
+        onClick={anterior}
+        className="
+          absolute left-6 top-1/2 -translate-y-1/2
+          w-12 h-12 rounded-full border-2 border-[#0e1b93]
+          flex items-center justify-center
+          text-2xl text-[#0e1b93]
+          "
+          >
+        ❮
+      </button>
+      
+
+      {/* SETA DIREITA */}
+      <button
+        onClick={proximo}
+        className="
+          absolute right-6 top-1/2 -translate-y-1/2
+          w-12 h-12 rounded-full border-2 border-[#0e1b93]
+          flex items-center justify-center
+          text-2xl text-[#0e1b93]
+        "
+      >
+        ❯
+      </button>
+
+      {/* INDICADORES */}
+      <div className="flex justify-center gap-3 mt-6">
+        {depoimentos.map((_, i) => (
+          <div
+            key={i}
+            className={`w-3 h-3 rounded-full ${
+              i === index ? "bg-red-600" : "bg-gray-300"
+            }`}
+          ></div>
+        ))}
+      </div>
+
+
     </div>
   </div>
-</div>
-
-
-{/* 6️⃣ BOTÃO — NO MOBILE FICA POR ÚLTIMO */}
-<div className="w-full flex justify-center mt-6 order-6">
-  <button
-    className="
-      bg-red-600 hover:bg-red-700 text-white font-bold
-      px-6 md:px-8 py-3 md:py-4 rounded-md
-      shadow-xl transition-all
-    "
-  >
-    A CHAMADA PARA AÇÃO VEM AQUI
-  </button>
-</div>
+        
+      <button
+  className="
+    block md:hidden
+    bg-red-600 hover:bg-red-700 
+    text-white font-bold
+    px-6 py-4
+    rounded-md shadow-xl 
+    transition-all
+    mt-10
+  "
+>
+  A CHAMADA PARA AÇÃO VEM AQUI
+</button>
+</section>
 
 
 

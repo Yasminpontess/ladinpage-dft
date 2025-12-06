@@ -52,6 +52,11 @@
   opacity: 1 !important;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 
 

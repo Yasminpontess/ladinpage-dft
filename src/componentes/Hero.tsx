@@ -99,7 +99,7 @@ export default function Hero() {
         <div
           className="
             absolute left-1/2 
-            top-[52%] md:top-[60%]   /* 🔼 SUBE NO MOBILE */
+            top-[48%] md:top-[55%]   /* 🔼 SUBE NO MOBILE */
             -translate-x-1/2
             z-20
             flex flex-col items-center
@@ -125,7 +125,7 @@ export default function Hero() {
           </h1>
 
           {/* SUBTÍTULO */}
-          <p className="mt-4 text-[13px] md:text-[20px] text-white drop-shadow-lg">
+          <p className="mt-4 text-[18px] md:text-[25px] text-white drop-shadow-lg">
             Capital em até 24h • Interior de 2 a 3 dias
           </p>
 

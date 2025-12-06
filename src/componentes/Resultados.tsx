@@ -138,7 +138,7 @@ export function ResultadosDFT() {
   return (
     <>
       <section
-        className="py-12 md:py-20 bg-cover bg-top bg-no-repeat"
+        className="py-12 md:py-15 bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage: "url('public/imagens/Grid 1.png')",
         }}
@@ -146,50 +146,57 @@ export function ResultadosDFT() {
         <div className="container mx-auto px-4">
           {/* heading */}
           <div className="text-center mb-8">
-            <div className="inline-block bg-red-600 text-white px-6 py-2 rounded mb-16">
-              <h2 className="text-base md:text-xl font-medium">
+            <div className="inline-block bg-red-600 text-white px-3 py-1 rounded mb-16">
+              <h2 className=" text-[19px] md:text-2xl font-medium">
                 Resultados que entregamos até aqui
               </h2>
             </div>
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
-
-  <div className="text-center">
-    <div className="text-blue-800 text-5xl md:text-5xl font-extrabold">
-      +<Counter to={1000} duration={2000} />
-    </div>
-    <div className="text-blue-800 text-sm md:text-base">Cargas fracionadas entregues</div>
-  </div>
-
-  <div className="text-center">
-    <div className="text-blue-800 text-5xl md:text-5xl font-extrabold">
+<div className="text-center">
+    <div className="text-[#1D1F96] text-5xl md:text-6xl font-extrabold">
       +<Counter to={10} duration={2000} />
     </div>
     <div className="text-blue-800 text-sm md:text-base">anos de mercado</div>
   </div>
 
   <div className="text-center">
-    <div className="text-blue-800 text-5xl md:text-5xl font-extrabold">
-      +<Counter to={500000} duration={2500} />
+    <div className="text-[#1D1F96] text-5xl md:text-6xl font-extrabold">
+      <Counter to={98} duration={2000} suffix="%" />
+    </div>
+    <div className="text-blue-800 text-sm md:text-base">de nível de OTD</div>
+  </div>
+
+  <div className="text-center">
+    <div className="text-[#1D1F96] text-5xl md:text-6xl font-extrabold">
+      +<Counter to={12000} duration={2000} />
+    </div>
+    <div className="text-blue-800 text-sm md:text-base">Cargas fracionadas entregues</div>
+  </div>
+
+  
+
+  <div className="text-center">
+    <div className="text-[#1D1F96] text-5xl md:text-6xl font-extrabold">
+      +<Counter to={28000} duration={2500} />
     </div>
     <div className="text-blue-800 text-sm md:text-base">toneladas expedidas</div>
   </div>
 
-  <div className="text-center">
-    <div className="text-blue-800 text-5xl md:text-5xl font-extrabold">
-      <Counter to={96} duration={2000} suffix="%" />
-    </div>
-    <div className="text-blue-800 text-sm md:text-base">de nível de OTD</div>
-  </div>
+  
 </div>
           </div>
 
           {/* content */}
           <div className="text-center max-w-3xl mx-auto">
 
-            <p className="text-blue-800 text-[20px] md:text-[25px] mb-5 mt-20 leading-tight">
-              Maximize seu faturamento e  crescimento com uma
-            </p>
+            <p className="text-blue-800 text-[25px] leading-tight mt-20 mb-5 md:hidden">
+  Maximize seu faturamento e <br /> crescimento com uma
+</p>
+<p className="hidden md:block text-blue-800 text-[30px] leading-tight md:mt-20 md:mb-5">
+  Maximize seu faturamento e  crescimento com uma
+</p>
+
 
             <h3
               className="
@@ -212,41 +219,56 @@ export function ResultadosDFT() {
           </div>
 
           {/* GRID CENTRALIZADO */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-1 items-start justify-items-center max-w-[800px]
- mx-auto">
+          <div
+  className="
+    grid 
+    grid-cols-1 
+    lg:grid-cols-3 
+    gap-6 
+    lg:gap-1 
+    items-start 
+    justify-items-center 
+    max-w-full 
+    lg:max-w-[1000px]
+    mx-auto
+  "
+>
+
 
             
             {/* Imagem desktop */}
             <div className="hidden lg:block lg:col-span-1 justify-self-center">
-              <div
-                id="sideImage"
-                className="
-                  w-full 
-                  max-w-[560px] 
-                  h-[650px]        
-                  rounded-lg 
-                  overflow-hidden 
-                  shadow-lg
-                  sticky top-20
-                  z-40
-                "
-              >
-                <img
-                  src="public/imagens/resultados.png"
-                  alt="DFT logística"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div 
+  id="sideImage"
+  className="
+    w-full
+    max-w-[1050px]
+    h-[630px]
+    rounded-lg
+    overflow-hidden
+    shadow-lg
+    sticky top-20
+    z-40
+  "
+>
+  <img
+    src="public/imagens/resultados.png"
+    alt="DFT logística"
+    className="w-full h-full object-cover"
+  />
+</div>
+
             </div>
 
             {/* Imagem mobile */}
-            <div className="lg:hidden  flex justify-center">
-              <img
-                src="public/imagens/resultados.png"
-                alt="DFT logística"
-                className="w-full max-w-[360px] rounded-lg object-cover shadow-lg"
-              />
-            </div>
+<div className="lg:hidden flex justify-center">
+  <img
+    src="public/imagens/resultados.png"
+    alt="DFT logística"
+    className="w-[860px] h-[270px] rounded-lg object-cover shadow-lg"
+  />
+</div>
+
 
             {/* right column */}
             <div className="lg:col-span-2 justify-self-center">
@@ -309,13 +331,13 @@ export function ResultadosDFT() {
 
           {/* MOBILE VERSION */}
           <div className="block md:hidden w-full pt-6 pb-6 mt-10 text-center">
-            <p className="text-blue-700 text-lg font-medium mb-5">
+            <p className="text-blue-700 text-[25px] font-medium mb-0">
               Por que escolher a
             </p>
 
             <h2
               className="
-                text-4xl font-extrabold
+                text-[40px] font-extrabold
                 bg-gradient-to-r
                 from-[#FF0000]
                 via-[#C3007A]
@@ -337,13 +359,13 @@ export function ResultadosDFT() {
 
           {/* DESKTOP VERSION */}
           <div className="hidden md:block w-full pt-40 pb-40 text-center">
-            <p className="text-blue-700 text-2xl font-medium mb-2">
+            <p className="text-[#1D1F96] text-[35px] font-medium mb-0">
               Por que escolher a
             </p>
 
             <h2
               className="
-                text-5xl font-extrabold
+                text-[65px] font-extrabold
                 bg-gradient-to-r
                 from-[#FF0000]
                 via-[#C3007A]

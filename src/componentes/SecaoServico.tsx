@@ -31,57 +31,65 @@ export default function SecaoServicos() {
 
   return (
     <section
-      className="
-        relative z-10
+  className="
+    mt-[30px]
+    md:mt-[20px]
+    relative z-10
+    w-full
+    min-h-[100vh]
+    md:min-h-[110vh]
+    flex
+    flex-col
+    justify-start
+    items-center
+    text-center
+    px-4
+    pt-[100px]
+    pb-[10px]
+    md:pt-[150px]
+    md:pb-[70px]
+    bg-cover
+    bg-center
+    bg-no-repeat
+    md:bg-[url('/imagens/BG 2.jpg')]
+  "
+  style={{
+    backgroundImage: "url('/imagens/BG 1.jpg')",
+  }}
+>
 
-        w-full
-        min-h-[130vh]           /* MOBILE TRAVADO */
-        md:min-h-[160vh]        /* DESKTOP */
-        flex
-        flex-col
-        justify-center
-        items-center
-        text-center
-        px-4
-        bg-cover
-        bg-center
-        bg-no-repeat
-        md:bg-[url('/imagens/BG 2.jpg')]
-      "
-      style={{
-        backgroundImage: "url('/imagens/BG 1.jpg')", /* Mesmo BG em todos os celulares */
-      }}
-    >
+
       
       {/* TÍTULOS */}
-      <div className="text-center mb-[10px] md:mb-[35px]">
+      <div className="text-center mb-[10px] md:mb-[20px]">
         <p className="text-white text-[26px] md:text-[38px]">
           Mais do que transporte
         </p>
 
         <h2
-          className="
-            block 
-            w-full 
-            text-[42px]            /* TAMANHO FIXO DO MOBILE */
-            md:text-[45px]
-            font-extrabold
-            bg-gradient-to-r
-            from-[#FFFFFF]
-            via-[#FF3B2E]
-            to-[#FF3B2E]
-            bg-clip-text
-            text-transparent
-            inline-block
-            leading-tight
-          "
-        >
-          Uma solução logística completa
-        </h2>
+  className="
+    block 
+    w-full 
+    text-[40px]
+    md:text-[45px]
+    font-extrabold
+    bg-gradient-to-r
+    from-[#FFF6F3]        /* branco suave, leve na esquerda */
+    via-[#FFB9A6] via-[5%] /* rosado leve no meio */
+    to-[#FF3B2E]          /* vermelho forte */
+    bg-clip-text
+    text-transparent
+    inline-block
+    leading-tight
+    mb-[10px] md:mb-[10px]
+  "
+>
+  Uma solução logística completa
+</h2>
       </div>
 
       {/* MOBILE - CARROSSEL */}
-      <div className="w-full md:hidden pt-6 pb-16">
+      <div className="w-[300px] md:hidden pt-6 pb-16">
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={20}
@@ -100,7 +108,7 @@ export default function SecaoServicos() {
                   relative 
                   h-[450px]
                   border border-white 
-                  rounded-2xl
+                  rounded-3xl
                   overflow-hidden 
                   shadow-xl
                 "
@@ -124,7 +132,7 @@ export default function SecaoServicos() {
       </div>
 
       {/* DESKTOP - GRID */}
-      <div className="hidden md:grid max-w-7xl mx-auto grid-cols-4 gap-8 px-6">
+      <div className="hidden md:grid max-w-8xl mx-auto grid-cols-4 gap-8 px-6 mb-[10px] md:-mb-[50px]">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -166,19 +174,21 @@ export default function SecaoServicos() {
       </div>
 
       {/* BOTÃO */}
-      <div className="-mt-[45px] md:mt-30 text-center">
+      <div className="-mt-[50px] md:mt-35 text-center">
         <button
           className="
             bg-red-600 
-            hover:bg-white 
+            hover:bg-white
+            text-[15px] 
             text-white 
             hover:text-blue-700 
             font-bold 
-            px-5
-            py-2
-            md:px-8
-            md:py-4 
-            rounded-lg 
+            px-4
+            py-1.5
+            md:px-4
+            md:py-2 
+            rounded-md 
+             
             transition
           "
         >
