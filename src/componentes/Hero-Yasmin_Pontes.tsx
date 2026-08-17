@@ -77,13 +77,18 @@ function Marquee() {
 export default function Hero() {
   return (
     <>
-      <section className="absolute w-screen relative w-full h-[650px] md:h-[900px] flex items-end justify-center overflow-hidden">
+    <section className="absolute w-screen relative w-full h-[650px] md:h-[900px] flex items-end justify-center overflow-hidden">
+
+
+
         
         {/* ---- FUNDO ---- */}
         <img
-          src="https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384294/Hero_2_DFT_ewcnik.png"
+          src="/imagens/imagem-14-compressed.webp"
           alt="Banner DFT"
           className="absolute w-screen inset-0 w-full h-full object-cover"
+
+
         />
 
         {/* ---- GRADIENTE EMBAIXO ---- */}
@@ -110,7 +115,7 @@ export default function Hero() {
 
           {/* LOGO */}
           <img
-           src="https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384294/logo-dft_c1gjme.png"
+           src="/imagens/imagem-15-compressed.webp"
            className="w-48 md:w-75 -mb-[68px] md:-mb-[125px]" />
 
           {/* TÍTULO */}

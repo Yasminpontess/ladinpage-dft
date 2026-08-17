@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
-import resultadosImg from "/src/assets/imagens/resultados.png";
-import roadImg from "../assets/imagens/Road.png";
 import gridBg from "../assets/imagens/Grid 1.png";
-import BgImg from "../assets/imagens/BG.png";
+
 
 function Counter({ from = 0, to = 1000, duration = 2000, suffix = "" }) {
   const [value, setValue] = useState(from);
@@ -257,7 +255,7 @@ export function ResultadosDFT() {
   "
 >
   <img
-    src="https://res.cloudinary.com/dlesrm7iv/image/upload/v1767714041/imgqualidade_tnoag3.jpg"
+    src="/imagens/imgqualidade_tnoag3.webp"
     alt="DFT logística"
     className="w-full h-full object-cover"
   />
@@ -268,7 +266,7 @@ export function ResultadosDFT() {
             {/* Imagem mobile */}
 <div className="lg:hidden flex justify-center">
  <img
-  src="https://res.cloudinary.com/dlesrm7iv/image/upload/v1767714041/imgqualidade_tnoag3.jpg"
+  src="/imagens/imgqualidade_tnoag3.webp"
   alt="DFT logística"
   className="w-[860px] h-[270px] rounded-lg object-cover shadow-lg"
 />
@@ -366,7 +364,7 @@ export function ResultadosDFT() {
             </h2>
 
             <img
-            src="https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384295/Road_vv2bfy.png"
+            src="/imagens/map mobile.webp"
               alt="Roadmap Mobile"
               className="w-[1000px] h-auto object-cover scale-[1.1] mt-[-95px] mb-25"
             />
@@ -395,7 +393,7 @@ export function ResultadosDFT() {
 
             <div className="pt-20 w-screen relative left-1/2 -translate-x-1/2">
               <img
-                src="https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384293/BG_e8nitp.png"
+                src="/imagens/imagem-5-compressed.webp"
                 alt="Roadmap DFT"
                 className="w-screen h-auto object-cover"
               />

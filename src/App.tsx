@@ -7,6 +7,7 @@ import { ResultadosDFT } from "./componentes/Resultados";
 import Segmentos from "./componentes/Segmentos";
 import Formulario from "./componentes/Formulario";
 
+
 const App = () => {
   return (
     <>
@@ -24,6 +25,9 @@ const App = () => {
             <Route path="/resultadosdft" element={<ResultadosDFT />} />
             <Route path="/segmentos" element={<Segmentos />} />
             <Route path="/formulario" element={<Formulario />} />
+            
+
+            
           </Routes>
 
           <Footer />

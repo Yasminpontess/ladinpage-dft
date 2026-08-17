@@ -5,19 +5,18 @@ import React, { useState, useEffect } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+
 import EntregasSP from "./EntregasSp";
 
 export default function Carrossel() {
   const segmentos = [
-    { title: "Eletrônicos", img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384293/Eletronicos_uze6kl.png" },
-    { title: "Cosméticos", img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384293/Cosmeticos_owxsio.png" },
-    { title: "Alimentos e Bebidas", img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767725398/Alimentos_e_Bebidas_bn09md.png" },
-    { title: "Têxtil", img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384295/Textil_zmk4hs.png" },
-    { title: "Agronegócio", img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384292/Agro_nxf873.png" },
-    { title: "Correlatos", img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384293/Correlatos_kzvtnn.png" },
-    { title: "Saneantes", img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384295/Saneantes_hrlvdi.png" },
+    { title: "Eletrônicos", img: "/imagens/imagem-11-compressed.webp" },
+    { title: "Cosméticos", img: "/imagens/imagem-7-compressed.webp" },
+    { title: "Alimentos e Bebidas", img: "/imagens/Alimentos e Bebidas.png" },
+    { title: "Têxtil", img: "/imagens/textil.webp" },
+    { title: "Agronegócio", img: "/imagens/agro.webp" },
+    { title: "Correlatos", img: "/imagens/imagem-6-compressed.webp" },
+    { title: "Saneantes", img: "/imagens/limpeza.webp" },
   ];
 
   const depoimentos = [
@@ -73,7 +72,7 @@ useEffect(() => {
     
     <div
       className=" w-screen py-[-10px] md:py-2 bg-cover bg-center -mt-22"
-      style={{ backgroundImage: "url('https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384293/BG_2_h1ahxs.jpg')" }}
+      style={{ backgroundImage: "url('/imagens/imagem-4-compressed.webp')" }}
     >
 
        

@@ -12,24 +12,24 @@ export default function SecaoServicos() {
     {
       title: "Armazenagem",
       text: "Estoque estratégico com gestão WMS, garantindo organização, controle e disponibilidade logística para sua operação.",
-      img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384293/Cross_Docking_a2fpup.jpg",
+      img: "/imagens/imagem-8-compressed.webp",
       
     },
     {
       title: "Picking & Packing",
       text: "Processos ágeis com medição, conferência e embalagens para separações eficientes e seguras.",
-      img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384294/Picking_Packing_liq1mg.jpg",
+      img: "/imagens/imagem-18-compressed.webp",
     },
     {
       title: "Cross Docking",
       text: "Recebimento e expedição integrados, sem necessidade de armazenagem. Mais agilidade, menos estoque parado e um fluxo logístico muito mais eficiente.",     
-      img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384292/Armazenagem_igcw4b.jpg",
+      img: "/imagens/2.webp",
     },
     {
       
       title: "Cargas agendadas ou Spot",
       text: "Soluções flexíveis para pedidos programados ou emergenciais, mantendo sua operação sempre em movimento.",
-      img: "https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384295/Programado_ou_Spot_mogr2s.jpg",
+      img: "/imagens/imagem-19-compressed.webp",
     },
   ];
 
@@ -59,7 +59,7 @@ export default function SecaoServicos() {
   "
   style={{
     backgroundImage:
-      "url('https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384293/BG_1_xkr9jr.jpg')",
+      "url('/imagens/fundo mobile.webp')",
   }}
 >
 

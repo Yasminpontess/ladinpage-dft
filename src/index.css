@@ -57,6 +57,32 @@
 }
 
 
+/* ===========================
+   🔒 BLOQUEIO TOTAL DARK MODE
+   (Samsung / Chrome Android)
+   =========================== */
+
+html {
+  color-scheme: light !important;
+}
+
+body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  forced-color-adjust: none !important;
+}
+
+#root {
+  background-color: #ffffff !important;
+  forced-color-adjust: none !important;
+}
+
+/* força todos os elementos */
+*,
+*::before,
+*::after {
+  forced-color-adjust: none !important;
+}
 
 
 

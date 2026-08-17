@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="absolute w-screen py-8 bg-white">
+    <footer className=" w-screen py-8 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center">
         <div className="mb-5">
           <img
-            src="https://res.cloudinary.com/dlesrm7iv/image/upload/v1767384292/Dft_4_nzykgc.png"
+            src="/imagens/imagem-10-compressed.webp"
             alt="DFT Logística"
             className="object-contain w-[260px] md:w-[100px] lg:w-[200px]"
           />

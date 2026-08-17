@@ -23,6 +23,8 @@ module.exports = {
     "px-10",
   ],
 
+  darkMode: "class",
+
   theme: {
     extend: {
       keyframes: {

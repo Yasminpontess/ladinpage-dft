@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Mail, Phone, PhoneCall } from "lucide-react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+
 
 export default function Formulario() {
   const [form, setForm] = useState({
@@ -29,25 +31,74 @@ export default function Formulario() {
 📂 Segmento: ${form.segmento}
 `;
 
-    const whatsappNumber = "5511973782106";
+    const whatsappNumber = "5511915855163";
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       message
     )}`;
 
     // ----- ENVIAR PARA EMAILJS ------
-    emailjs
-      .send("SEU_SERVICE_ID", "SEU_TEMPLATE_ID", form, "SEU_PUBLIC_KEY")
-      .then(() => {
-        console.log("Email enviado com sucesso!");
-      })
-      .catch((err) => console.error("Erro ao enviar email:", err));
+      emailjs.send(
+  "service_a7igk3f",        // Service ID
+  "template_ccfulqs",      // Template ID
+  {
+    nome: form.nome,
+    email: form.email,
+    whatsapp: form.whatsapp,
+    cnpj: form.cnpj,
+    segmento: form.segmento,
+  },
+  "WuhAel_XHW7IaN3eQ"
+)
+
+.then(() => {
+
+  // 🔥 DISPARA CONVERSÃO GOOGLE ADS (APÓS SUCESSO)
+  if (window.gtag_report_conversion) {
+    window.gtag_report_conversion();
+  }
+
+  Swal.fire({
+    title: "Solicitação enviada!",
+    text: "Nossa equipe entrará em contato em breve.",
+    icon: "success",
+    confirmButtonText: "Ok",
+    confirmButtonColor: "#dc2626",
+
+    showDenyButton: true,
+    denyButtonText: "Nos acompanhe no Instagram",
+    denyButtonColor: "#E1306C"
+  }).then((result) => {
+    if (result.isDenied) {
+      window.open(
+        "https://www.instagram.com/dftlogistica?igsh=MXJ0ZnFzZ2l4cTBmYQ==",
+        "_blank"
+      );
+    }
+  });
+})
+
+.catch((err) => {
+  Swal.fire({
+    title: "Erro ao enviar",
+    text: "Tente novamente em instantes.",
+    icon: "error",
+    confirmButtonText: "Ok",
+    confirmButtonColor: "#dc2626",
+  });
+  console.error(err);
+});
+
+
+
+
 
     // ----- REDIRECIONAR PARA O WHATSAPP ------
     window.open(whatsappURL, "_blank");
   };
 
   return (
-    <section className="w-full flex justify-center items-center py-16 bg-white">
+    <div className="relative w-full h-[700px]">
+    <section id="formulario" className="absolute w-screen flex justify-center items-center py-16 bg-white">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
 
         {/* LADO ESQUERDO */}
@@ -106,12 +157,12 @@ export default function Formulario() {
 
               <p className="flex items-center gap-2 text-[#2621BF] justify-center text-[18px] md:justify-start">
                 <Phone size={20} className="text-red-600" />
-                (11) 4159-1832
+                (11) 4159-3558
               </p>
 
               <p className="flex items-center gap-2 text-[#2621BF] justify-center text-[18px] md:justify-start">
                 <PhoneCall size={20} className="text-red-600" />
-                (11) 99282-9484
+                (11) 91585-5163
               </p>
             </div>
           </div>
@@ -174,12 +225,14 @@ export default function Formulario() {
           </select>
 
           <button
-            type="submit"
-            className="w-full py-3 rounded-lg text-white font-semibold
-            bg-gradient-to-r from-[#3636c9] to-red-600 flex items-center justify-center gap-2"
-          >
-            SOLICITAR ORÇAMENTO ➤
-          </button>
+  id="whatswidget-phone-desktop"
+  type="submit"
+  className="w-full py-3 rounded-lg text-white font-semibold
+  bg-gradient-to-r from-[#3636c9] to-red-600"
+>
+  SOLICITAR ORÇAMENTO ➤
+</button>
+
 
 
  <div className="mt-4 space-y-2 text-sm mx-auto md:mx-0 block md:hidden">
@@ -190,12 +243,12 @@ export default function Formulario() {
 
   <p className="flex items-center gap-2 text-[#2621BF] justify-center md:justify-start">
     <Phone size={20} className="text-red-600" />
-    (11) 4159-1832
+    (11) 4159-3558
   </p>
 
   <p className="flex items-center gap-2 text-[#2621BF] justify-center md:justify-start">
     <PhoneCall size={20} className="text-red-600" />
-    (11) 99282-9484
+    (11) 91585-5163
   </p>
 </div>
 
@@ -207,5 +260,6 @@ export default function Formulario() {
 
       </div>
     </section>
+    </div>
   );
 }

@@ -4,8 +4,11 @@ import { ResultadosDFT } from "../../componentes/Resultados";
 import SecaoServicos from "../../componentes/SecaoServico";
 import Segmentos from "../../componentes/Segmentos";
 import Formulario from "../../componentes/Formulario";
+import Footer from "../../componentes/Footer";
 
-export default function Home() {
+
+
+export default function Home() { 
   return (
     <>
       <Hero />
@@ -13,6 +16,9 @@ export default function Home() {
       <ResultadosDFT />
       <Segmentos />
       <Formulario />
+      
+
+      
     </>
   );
 }
